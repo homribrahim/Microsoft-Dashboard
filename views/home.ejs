@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Home Page</title>
+
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="../views/assets/modules/bootstrap-5.1.3/css/bootstrap.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="../views/assets/css/style_home.css">
+	<!-- FontAwesome CSS-->
+	<link rel="stylesheet" href="../views/assets/modules/fontawesome6.1.1/css/all.css">
+	<!-- Boxicons CSS-->
+	<link rel="stylesheet" href="../views/assets/modules/boxicons/css/boxicons.min.css">
+	<!-- ICON -->
+	<link rel="icon" type="icon" href="../Images/logo_no.png">
+	<!--ALERT JQuery-->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+</head>
+
+<body>
+
+	<!--Topbar -->
+	<div class="topbar transition">
+		<div class="bars">
+			<button type="button" class="btn transition" id="sidebar-toggle">
+				<i class="fa fa-bars"></i>
+			</button>
+		</div>
+		<div class="menu">
+			<ul>
+				<li>
+					<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<img src="../views/assets/images/avatar/avatar-1.png" alt="">
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="/users/edit_profile"><i class="fa fa-cog size-icon-1"></i>
+							<span>Paramètres</span></a>
+						<hr class="dropdown-divider">
+						<a class="dropdown-item" href="#"><i class="fa fa-sign-out-alt  size-icon-1"></i> <span>Se
+								Déconnecter</span></a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Sidebar-->
+	<div class="sidebar transition overlay-scrollbars animate__animated  animate__slideInLeft">
+		<div class="sidebar-content">
+			<div id="sidebar">
+
+				<!-- Logo -->
+				<div class="logo">
+					<center>
+						<img src="../Images/logo_no.png" style="width: 100px; height: 100px ;margin-top:20px;">
+					</center>
+				</div>
+
+				<ul class="side-menu">
+					<li>
+						<a href="/users/index" class="active">
+							<i class='bx bxs-dashboard icon'></i>Stats
+						</a>
+					</li>
+
+					<!-- Divider-->
+					<li class="divider" data-text="STARTER">Actualités</li>
+
+					<li>
+						<a href="/users/home">
+							<i class='bx bxs-home icon'></i>
+							Home
+						</a>
+					</li>
+
+					<!-- Divider-->
+					<li class="divider" data-text="Atrana">Extra</li>
+					<li>
+						<a href="/users/fiche">
+							<i class='bx bxs-notepad icon'></i>
+							Assisting Sheet
+						</a>
+
+					<li>
+						<a href="#">
+							<i class='bx bx-user icon'></i>
+							Profile
+							<i class='bx bx-chevron-right icon-right'></i>
+						</a>
+						<ul class="side-dropdown">
+							<li><a href="/users/edit_profile">Edit Profile</a></li>
+							<li><a href="/users/des_profile">Disable Account</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/users/help">
+							<i class='bx bxs-hand icon'></i>
+							Help
+						</a>
+					</li>
+					<li>
+						<a href="#" style="color: #ff8080;">
+							<i class='bx bxs-log-out icon'></i>
+							Sign Out
+						</a>
+
+					</li>
+					<!-- Divider-->
+				</ul>
+
+				<div class="ads">
+					<div class="wrapper">
+						<div class="help-icon"><i class="fa fa-circle-question fa-3x"></i></div>
+						<p>Need Help With<strong>MICROSOFT</strong>?</p>
+						<a href="/users/contact" class="btn-upgrade">Contact US</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div><!-- End Sidebar-->
+
+
+	<div class="sidebar-overlay"></div>
+
+	<!--Content Start-->
+
+	<!--Pop Up ALERT-->
+
+	<div class="popup_box">
+		<i class="fas fa-exclamation" style=" font-size: 60px;
+		color: #081A51;
+		border: 5px solid #081A51;
+		padding: 20px 40px;
+		border-radius: 50%;
+		margin: -10px 0 20px 0;"></i>
+		<h1>Etes-Vous Encore Là ? <i class="fas fa-grin-beam-sweat fa-1x" style="color: #081A51;"></i> </h1>
+		<label>Anis Balti</label>
+		<div class="btns">
+			<a href="#" class="btn1">&nbsp;&nbsp;&nbsp; Oui &nbsp;&nbsp;&nbsp;</a>
+		</div>
+	</div>
+	<!--End Pop Up ALERT-->
+
+	<div class="content-start transition  ">
+		<div class="container-fluid dashboard">
+			<div class="content-header">
+				<center>
+					<div class="calcul">
+						<div class="buttons">
+							<button id="play" class="btn btn-primary mt-3 ml-5 ">
+							</button>
+							<button id="stop" class="btn btn-primary mt-3">
+							</button>
+						</div>
+						<div class="calc">
+							<h3>Millimes</h3>
+							<div id="timer" name="formule" style="color:#081A51 ; font-size: 20px;"></div>
+							<h3>Points / Minute</h3>
+							<div id="timer2" name="points" style="color:#081A51 ; font-size: 20px;"></div>
+						</div>
+					</div>
+				</center>
+			</div>
+
+			<center>
+				<form class="form-inline col-sm-12 col-lg-6 col-md-12 mt-5" action="/users/home" method="POST"
+					style="border: 10px double #081A51; padding:30px; box-shadow:5px 5px 5px 5px gray;">
+					<label for="search">Search</label>
+					<input class="form-control mr-sm-2" name="search" type="search" aria-label=" Search"
+						placeholder="Type">
+					<button class="btn btn-primary mt-3 ml-5">Search</button>
+					<button type="reset" class="btn btn-outline-secondary mt-3">Cancel</button>
+				</form>
+			</center>
+			<div id="news-id">
+				<div class="news-container">
+					<div class="news">
+						<% art.forEach(function(article,index){ %>
+							<% if ((typeof article.url=='object' ) || (typeof article.title=='object' ) || (typeof
+								article.urlToImage=='object' ) || (typeof article.content=='object' )){ %>
+								<% } else{ %>
+									<a href="<%- article.url %>" target="_blank" class="news-box Hover-effect">
+										<img src="<%- article.urlToImage %>" alt="Image">
+										<h3 style="margin-top: 30px;">
+											<%- article.title %>
+										</h3>
+										<p
+											style="position: relative; width: 100%; text-align: center; color: white; margin-top: 40px;">
+											<%- article.content.replace(/<[^>]+>/g, '') %>
+										</p>
+										<br>
+										<p style="position:relative; margin-bottom:5px">
+											Updated: <span style="color:white;">
+												<%- new Date(article.publishedAt.slice(0,10)).toDateString() %>
+													<%- moment.utc(article.publishedAt).local().format('hh : mm A') %>
+											</span></p>
+									</a>
+									<% } %>
+										<% }) %>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div><!-- End Container-->
+	</div><!-- End Content-->
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer">
+			<div class="float-start">
+				<p>2022 &copy; CIMB</p>
+			</div>
+			<div class="float-end">
+				<p>Crafted with
+					<span class="text-danger">
+						<i class="fa fa-heart"></i> by
+						<a href="https://www.linkedin.com/in/brahim-homri-30a7a9199/" class="author-footer">&nbsp;
+							Brahim
+						</a>
+					</span>
+				</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Preloader -->
+	<div class="loader">
+		<div class="spinner-border text-light" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+
+	<!-- Loader -->
+	<div class="loader-overlay"></div>
+
+	<!-- Display Points / Display Formule -->
+
+	<script>
+		$(document).ready(function () {
+			var formule = 0;
+			var points = 0;
+			var on = false;
+			var reset = false;
+
+			$("#timer").html("0");
+			$("#timer2").html("0");
+			$("#play").html("Start Reading");
+			$("#stop").html("Save Points");
+
+
+			$("#play").click(function () {
+				Start();
+			});
+
+			$("#stop").click(function () {
+				Stop();
+			});
+
+
+			$("#reset").click(function () {
+				Reset();
+			});
+
+			/* function fn60sec() {
+
+				setTimeout(Stop, 20000);
+				$('.popup_box').css("display", "block");
+				$('.btn1').click(function () {
+					Start();
+					$('.popup_box').css("display", "none");
+				});
+
+			}
+			setInterval(fn60sec, 30 * 1000);
+			fn60sec(); */
+
+			function chrono() {
+
+				/* var time = Math.floor(Math.random() * 50000); */
+				formule += 0.45;
+				points += 0.016666;
+				document.getElementById("timer").innerHTML = formule.toFixed(2);
+				document.getElementById("timer2").innerHTML = points.toFixed(2);
+				document.getElementById("play").innerHTML = "Reading...";
+				document.getElementById("play").disabled = true;
+
+
+			}
+
+			function Start() {
+				if (on === false) {
+					document.getElementById("stop").innerHTML = "Save Points";
+					document.getElementById("stop").disabled = false;
+					timerID = setInterval(chrono, 1000);
+					on = true;
+					reset = false;
+
+				}
+
+			}
+
+			function Stop() {
+				if (on === true) {
+					document.getElementById("stop").innerHTML = "Points Saved";
+					document.getElementById("stop").disabled = true;
+					document.getElementById("play").innerHTML = "Start Reading";
+					document.getElementById("play").disabled = false;
+					on = false;
+					clearTimeout(timerID);
+
+				}
+			}
+
+			function Reset() {
+				if (reset === false) {
+					clearInterval(timerID);
+					points = 0;
+					formule = 0;
+					$("#timer").html("0");
+					$("#timer2").html("0");
+					reset = true;
+				}
+			}
+		})
+	</script>
+
+
+	<!-- Chrono Script -->
+
+	<script>
+		function showTime() {
+			var date = new Date();
+			var h = date.getHours(); // 0 - 23
+			var m = date.getMinutes(); // 0 - 59
+			var s = date.getSeconds(); // 0 - 59
+			var d = date.getDay(); // 0 - 30
+			switch (new Date().getDay()) {
+				case 0:
+					d = "Sunday";
+					break;
+				case 1:
+					d = "Monday";
+					break;
+				case 2:
+					d = "Tuesday";
+					break;
+				case 3:
+					d = "Wednesday";
+					break;
+				case 4:
+					d = "Thursday";
+					break;
+				case 5:
+					d = "Friday";
+					break;
+				case 6:
+					d = "Saturday";
+			}
+			var time = d + " , " + h + ":" + ((m < 10) ? '0' + m : + m) + ":" + ((s < 10) ? '0' + s : + s) + " ";
+			document.getElementById("MyClockDisplay").innerText = time;
+			document.getElementById("MyClockDisplay").textContent = time;
+			setTimeout(showTime, 1000);
+		}
+		showTime();
+	</script>
+
+	<!-- API SCRIPT -->
+
+	<script src="moment.js"></script>
+	<script src="moment-timezone-with-data.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+	<!-- JS Libraies -->
+	<script src="../views/assets/modules/jquery/jquery.min.js"></script>
+	<script src="../views/assets/modules/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+	<script src="../views/assets/modules/popper/popper.min.js"></script>
+
+	<!-- Template JS File -->
+	<script src="../views/assets/js/script.js"></script>
+
+	<!--JQuery-->
+
+
+</body>
+
+</html>

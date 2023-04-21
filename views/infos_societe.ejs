@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Informations Société - CIMB</title>
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="../views/assets/modules/bootstrap-5.1.3/css/bootstrap.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="../views/assets/css/style.css">
+	<!-- FontAwesome CSS-->
+	<link rel="stylesheet" href="../views/assets/modules/fontawesome6.1.1/css/all.css">
+	<!-- Boxicons CSS-->
+	<link rel="stylesheet" href="../views/assets/modules/boxicons/css/boxicons.min.css">
+	<!-- ICON -->
+	<link rel="icon" type="icon" href="../Images/logo_cim.png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+
+<body>
+
+	<!--Topbar -->
+	<div class="topbar transition">
+		<div class="bars">
+			<button type="button" class="btn transition" id="sidebar-toggle">
+				<i class="fa fa-bars"></i>
+			</button>
+		</div>
+		<div class="menu">
+			<ul>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<img src="../views/assets/images/avatar/avatar-1.png" alt="">
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="/users/edit_profile"><i class="fa fa-cog size-icon-1"></i>
+							<span>Paramètres</span></a>
+						<hr class="dropdown-divider">
+						<a class="dropdown-item" href="#"><i class="fa fa-sign-out-alt  size-icon-1"></i> <span>Se
+								Déconnecter</span></a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Sidebar-->
+	<div class="sidebar transition overlay-scrollbars animate__animated  animate__slideInLeft">
+		<div class="sidebar-content">
+			<div id="sidebar">
+
+				<!-- Logo -->
+				<div class="logo">
+					<center>
+						<img src="../Icons/CIMB.png" style="width: 150px; height:140px">
+					</center>
+				</div>
+
+				<ul class="side-menu">
+					<li>
+						<a href="/users/index" class="active">
+							<i class='bx bxs-dashboard icon'></i> Statistiques
+						</a>
+					</li>
+
+					<!-- Divider-->
+					<li class="divider" data-text="STARTER">Actualités</li>
+
+					<li>
+						<a href="/users/home">
+							<i class='bx bxs-home icon'></i>
+							Accueil
+						</a>
+					</li>
+
+					<!-- Divider-->
+					<li class="divider" data-text="Atrana">Extra</li>
+					<li>
+						<a href="/users/fiche">
+							<i class='bx bxs-notepad icon'></i>
+							Fiche De Paie
+
+						</a>
+					<li>
+						<a href="/users/infos_societe">
+							<i class='bx bxs-data icon'></i>
+							Informations Du Société
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class='bx bx-user icon'></i>
+							Profile
+							<i class='bx bx-chevron-right icon-right'></i>
+						</a>
+						<ul class="side-dropdown">
+							<li><a href="/users/edit_profile">Editer Profile</a></li>
+							<li><a href="/users/des_profile">Désactiver Le Compte</a></li>
+
+						</ul>
+					</li>
+
+					<li>
+						<a href="/users/help">
+							<i class='bx bxs-hand icon'></i>
+							Aide
+						</a>
+					</li>
+
+					<li>
+						<a href="#" style="color: #ff8080;">
+							<i class='bx bxs-log-out icon'></i>
+							Se Déconnecter
+						</a>
+					</li>
+				</ul>
+
+				<div class="ads">
+					<div class="wrapper">
+						<div class="help-icon"><i class="fa fa-circle-question fa-3x"></i></div>
+						<p>Besoin D'aide Avec <strong>CIMB</strong>?</p>
+						<a href="/users/contact" class="btn-upgrade">Contactez-Nous</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div><!-- End Sidebar-->
+
+
+	<div class="sidebar-overlay"></div>
+
+
+	<!--Content Start-->
+	<div class="content-start transition  ">
+		<div class="container-fluid dashboard">
+			<div class="content-header">
+				<h1>Les Ciments De Bizerte ?!</h1>
+				<h3>Découvrez-Là Maintenant !</h3>
+			</div>
+			<br><br>
+			<p style="font-size: 17px">
+				Crée en 1950, la Société des Ciments Portland de Bizerte (CPB) a démarré sa première ligne en 1953.
+				<br>
+				<br>
+				<br>
+				<center>
+					<img src="../Images/cimenterie.jpg" alt="cimenterie" style="
+						border-radius: 3%;
+						border: solid 1px #081A51;
+						box-shadow: 10px 15px 10px 10px rgba(0,0,0,.4);
+
+						">
+				</center>
+			</p>
+			<p style="font-size: 17px">
+				<br>
+				<br>
+				En 1976 , elle est devenue la Société des Ciments de Bizerte (SCB), Entreprise Publique en forme de
+				Société Anonyme à capital social de 14.598.283,000 D où l’Etat détient 99,52% des parts et les privés
+				0,48 % des parts.
+				<br>
+				<br>
+				En 2009, la SCB a été introduite dans la cotation de la Bourse des Valeurs Immobilières à raison de 20%
+				de son capital.
+				<br>
+				<br>
+				Une rénovation totale a été réalisée dans l’usine avec l’enlèvement des deux anciens fours et la mise en
+				place d’une nouvelle ligne de cuisson de 3800T/jour, une consommation calorifique de 760 thermies à la
+				tonne et des émissions atmosphériques de la cheminée inférieures à 20 mg/Nm3.
+				<br>
+				<br>
+				En juin 2014, le quai des Ciments de Bizerte a reçu le premier bateau de chargement Clincker à travers
+				la nouvelle installation BEDESCHI de chargement et de déchargement développant sa capacité
+				d’exportation.
+				<br>
+				<br>
+			</p>
+			<center>
+				<img src="../Images/bateau.jpg" alt="cimenterie" style="
+					border-radius: 3%;
+					border: solid 1px #081A51;
+					box-shadow: 10px 15px 10px 10px rgba(0,0,0,.4);
+					">
+			</center>
+			<br>
+			<br>
+			<h3>Production Liant hydraulique :</h3>
+			<br>
+			<p style="font-size: 17px">
+				La capacité moyenne de production des liants hydrauliques est d’environ 1.350.000 Tonnes/An :
+				<br>
+				<br>
+				⦁ Ciment Portland CEM I 42,5 N.
+				<br>
+				⦁ Ciment Portland au calcaire CEM II / A-L 32,5 N.
+				<br>
+				⦁ Chaux hydraulique Artificielle CHA 10
+			</p>
+			<br>
+			<h3>Expéditions</h3>
+			<br>
+			<h4>⦁ Voie Terrestre</h4>
+			<br>
+			<br>
+			<center>
+				<img src="../Images/terrestre.jpg" alt="cimenterie" style="
+					border-radius: 3%;
+					border: solid 1px #081A51;
+					box-shadow: 10px 15px 10px 10px rgba(0,0,0,.4);
+					">
+			</center>
+			<br>
+			<br>
+			<br>
+			<h4>⦁ Voie Maritime</h4>
+			<br>
+			<center>
+				<img src="../Images/maritime.jpg" alt="cimenterie" style="
+					border-radius: 3%;
+					border: solid 1px #081A51;
+					box-shadow: 10px 15px 10px 10px rgba(0,0,0,.4);
+					">
+			</center>
+			<br>
+			<br>
+			<br>
+			<h4>Système de management
+			</h4>
+			<br>
+			<p style="font-size: 17px;">
+				Afin d’assurer et de garantir la stabilité qualitative de son procédé de
+				fabrication et des produits engendrés, il y a eu mise en place d’un système primordialement de contrôle
+				qualité avec l’ISO 9002:1994 et développé vers un système de management qualité certifié respectivement
+				ISO 9001-2000, ISO 9001-2008 et actuellement le référentiel ISO 9001-2015
+			</p>
+			<br>
+			<br>
+			<h3>Chartes Utiles</h3>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h4>Charte 1 : Evolution Du Production De (SCB) &dash; (Tonnes Par Jour / Année)
+							</h4>
+						</div>
+						<div class="card-body">
+							<canvas id="myChart"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h4>Charte 2 : Evolution Du Capital Social De (SCB) &dash; (Millions De Dinars / Année)</h4>
+						</div>
+						<div class="card-body">
+							<canvas id="myChart1"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h4>Charte 3 : Répartition De (SCB)</h4>
+						</div>
+						<div class="card-body">
+							<canvas id="myChart2"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Container-->
+		</div><!-- End Content-->
+	</div>
+	<!-- Footer -->
+	<footer>
+		<div class="footer">
+			<div class="float-start">
+				<p>2022 &copy; CIMB</p>
+			</div>
+			<div class="float-end">
+				<p>Crafted with
+					<span class="text-danger">
+						<i class="fa fa-heart"></i> by
+						<a href="https://www.linkedin.com/in/brahim-homri-30a7a9199/" class="author-footer">&nbsp;
+							Brahim
+						</a>
+					</span>
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Charts -->
+
+
+	<script>
+		var xValues = [0, 1953, 1961, 1976, 1978, 2009];
+
+		new Chart("myChart", {
+			type: "line",
+			data: {
+				labels: xValues,
+				datasets: [{
+					data: [0, 450, 550, 2550, 2600, 3800],
+					borderColor: "blue",
+
+				}]
+			}
+		});
+
+	</script>
+
+	<script>
+		var xValues = ["1959", "2002"];
+		var yValues = [14, 35, 40];
+		var barColors = ["brown", "#1B2B65"]
+
+		new Chart("myChart1", {
+			type: "bar",
+			data: {
+				labels: xValues,
+				datasets: [{
+					backgroundColor: barColors,
+					data: yValues
+				}]
+			},
+		});
+	</script>
+
+	<script>
+		var xValues = ["Etat", "Privé"];
+		var yValues = [99.52, 0.48];
+		new Chart("myChart2", {
+			type: "pie",
+			data: {
+				labels: xValues,
+				datasets: [{
+					backgroundColor: barColors,
+					data: yValues
+				}]
+			},
+			options: {
+				title: {
+					display: true,
+					text: "Répartition En Pourcentage"
+				}
+			}
+		});
+	</script>
+
+
+	<!-- Preloader -->
+	<div class="loader">
+		<div class="spinner-border text-light" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+
+	<!-- Loader -->
+	<div class="loader-overlay"></div>
+
+	<!-- JS Libraies -->
+	<script src="../views/assets/modules/jquery/jquery.min.js"></script>
+	<script src="../views/assets/modules/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+	<script src="../views/assets/modules/popper/popper.min.js"></script>
+
+	<!-- Template JS File -->
+	<script src="../views/assets/js/script.js"></script>
+</body>
+
+</html>

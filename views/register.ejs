@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/views/style_register.css">
+    <link rel="icon" href="/Icons/CIMB.png">
+
+</head>
+
+<body>
+
+
+
+    <section id="signup">
+        <center>
+            <h1>Sign Up</h1>
+            <div class="image"></div>
+            <div id="signup-form-wrap">
+                <img src="/Icons/user.png" />
+                <form id="signup-form" action="/users/register" method="POST">
+                    <ul>
+                        <% if (typeof errors !='undefined' ) { %>
+                            <% errors.forEach(error=> { %>
+                                <li>
+                                    <%= error.message %>
+                                </li>
+                                <% }) %>
+                                    <% } %>
+                    </ul>
+                    <input type="text" id="name" name="name" placeholder="Name" required><i
+                        class="validation"><span></span><span></span></i>
+                    <input type="text" id="email" name="email" placeholder="Email" required><i
+                        class="validation"><span></span><span></span></i>
+                    <select id="department" name="department" aria-placeholder="Department">
+                        <option selected disabled>Department</option>
+                        <option value="Informatique">Web Development
+                        <option value="Finance">Machine Learning
+                        <option value="Maintenance">Cloud Engineering
+                        <option value="Commerciale">Game Development
+                        <option value="Commerciale">UI / UX Design
+                    </select>
+                    <input type="password" id="password" name="password" placeholder="Password" required><i
+                        class="validation"><span></span><span></span></i>
+                    <input type="password" id="password2" name="password2" placeholder="Confirme Password" required><i
+                        class="validation"><span></span><span></span></i>
+                    <input type="submit" value="Get In The Family">
+                    <a href="/users/login">You Already Have An Account ? Sign IN Now !</a>
+                </form>
+            </div>
+        </center>
+    </section>
+
+</body>
+
+</html>

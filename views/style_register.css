@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#signup {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#signup .image {
+    position: absolute;
+    background-image: url("/Images/wallpaper.png");
+    /* Set a specific height */
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#signup img {
+    margin-top: 30px;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    color: #3ca9e2;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+a:focus,
+a:hover,
+a:link:focus,
+a:link:hover,
+a:visited:focus,
+a:visited:hover,
+a:active:focus,
+a:active:hover {
+    color: #329dd5;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#signup-form-wrap {
+    background-color: #fff;
+    width: 35%;
+    margin: 110px auto;
+    text-align: center;
+    padding: 20px 0 0 0;
+    border-radius: 6px;
+    box-shadow: 0px 30px 50px 0px rgba(255, 255, 255, 0.8);
+}
+
+#signup-form {
+    padding: 50px 0px;
+}
+
+#signup-form-wrap {
+    margin-top: 10px;
+}
+
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 20px;
+    outline: none;
+    height: 50px;
+    line-height: 60px;
+    border-radius: 4px;
+}
+
+input[type="text"],
+input[type="password"] {
+
+    width: 80%;
+    padding: 0 0 0 10px;
+    color: #8a8b8e;
+    border: 3px solid #8a8b8e;
+    font-style: normal;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    display: inline-block;
+    background: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #3ca9e2;
+}
+
+input[type="text"]:focus:invalid,
+input[type="password"]:focus:invalid {
+    color: #cc1e2b;
+    border-color: #cc1e2b;
+}
+
+input[type="text"]:valid~.validation,
+input[type="password"]:valid~.validation {
+    display: block;
+    border-color: #0C0;
+}
+
+input[type="text"]:valid~.validation span,
+input[type="password"]:valid~.validation span {
+    background: #0C0;
+    position: absolute;
+    border-radius: 6px;
+}
+
+input[type="text"]:valid~.validation span:first-child,
+input[type="password"]:valid~.validation span:first-child {
+    top: 30px;
+    left: 14px;
+    width: 20px;
+    height: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type="text"]:valid~.validation span:last-child,
+input[type="password"]:valid~.validation span:last-child {
+    top: 35px;
+    left: 8px;
+    width: 11px;
+    height: 3px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.validation {
+    display: none;
+    position: absolute;
+    content: " ";
+    height: 60px;
+    width: 30px;
+    right: 15px;
+    top: 0px;
+}
+
+input[type="submit"] {
+    border: none;
+    width: 70%;
+    height: 60px;
+    margin-top: 30px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #287;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(4, 172, 144);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    box-shadow: 4px 4px 4px 4px gray;
+    color: whitesmoke;
+}
+
+#signup h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            white 0%,
+            wheat 29%,
+            #287 67%,
+            #287 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2.5s linear infinite;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+#signup select {
+    width: 80%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    color: #8a8b8e;
+    border: 3px solid #8a8b8e;
+    padding: 0 0 0 7px;
+    font-weight: bold;
+}
+
+#signup ul li {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            white 0%,
+            wheat 29%,
+            #287 67%,
+            #287 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2.5s linear infinite;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+
+#signup a {
+    background-image: linear-gradient(-225deg,
+            black 0%,
+            black 29%,
+            #287 67%,
+            #287 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2.5s linear infinite;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 887px) {
+    input[type="submit"] {
+        width: 70%;
+        font-size: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    #signup select,
+    #signup a {
+        font-size: 11px;
+    }
+
+    #signup ul li {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #signup h1 {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    #signup-form-wrap {
+        margin-top: 5px;
+        padding: 0px 0px 0px 0px;
+    }
+}
